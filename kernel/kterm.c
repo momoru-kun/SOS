@@ -1,3 +1,5 @@
+#include <arch/x86/keyboard.h>
+#include <arch/x86/kheap.h>
 #include <kterm.h>
 #include <tty.h>
 #include <libk/printf.h>

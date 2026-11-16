@@ -2,6 +2,7 @@
 #include <arch/x86/kheap.h>
 #include <panic.h>
 #include <libk/printf.h>
+#include <libk/stdlib.h>
 
 // The kernel's page directory
 page_directory_t *kernel_directory=0;

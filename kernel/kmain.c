@@ -1,4 +1,8 @@
 //kmain.c entry point to kernel
+#include <arch/x86/gdt.h>
+#include <arch/x86/keyboard.h>
+#include <arch/x86/timer.h>
+#include <libk/printf.h>
 #include <tty.h>
 #include <multiboot.h>
 #include <paging.h>
@@ -18,5 +22,4 @@ void kmain(int magic, multiboot_info_t *mboot_ptr)
 	init_keyboard();
 	init_paging();
 	kterm();
-	return 0xDEADC0DE;
 }

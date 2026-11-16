@@ -1,0 +1,21 @@
+---
+CompileFlags:
+  Add:
+    - "-Ikernel/include"
+    - "-target"
+    - "i686-elf"
+    - "-m32"
+    - "-ffreestanding"
+    - "-fno-builtin"
+    - "-nostdlib"
+    - "-nostdinc"
+    - "-fno-stack-protector"
+  Remove:
+    - "-mno-*"
+    - "-fno-pic"
+Diagnostics:
+  UnusedIncludes: None
+  MissingIncludes: Strict
+Index:
+  Background: Build
+

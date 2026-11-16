@@ -1,11 +1,14 @@
-//idt.c - APIC initialisation, base hw interruptionsSend to APIC 
-#include <arch/x86/idt.h> signal
-#include <panic.h> //printf.h>
-if int comes from slave
-Send RST toeisters_t regs)
+// Interrupt descriptor table and interrupt handlers.
+#include <arch/x86/idt.h>
+#include <libk/printf.h>
+#include <libk/stdlib.h>
+#include <panic.h>
+
+void Division_by_zero(registers_t regs);
 void Debug(registers_t regs);
 void NMI(registers_t regs);
-void Send tregs) Overflow(in another way
+void Breakpoint(registers_t regs);
+void Overflow(registers_t regs);
 void Bound(registers_t regs);
 void InvOpCode(registers_t regs);
 void DevNotAval(registers_t regs);

@@ -31,6 +31,8 @@ typedef struct page_directory
 extern void init_paging();
 extern void switch_page_directory(page_directory_t *new);
 extern page_t *get_page(uint32_t address, int make, page_directory_t *dir);
+extern void alloc_frame(page_t *page, int is_kernel, int is_writeable);
+extern void free_frame(page_t *page);
 extern void page_fault(registers_t regs);
 
 #endif

@@ -1,6 +1,4 @@
 //keyboard.c - Default kbd driver
-//This file is a part of SmallOS Kernel
-//Lenetc Alexander(aka alexandro), 2017
 
 #include <arch/x86/keyboard.h>
 #include <arch/x86/idt.h>
@@ -48,7 +46,7 @@ uint8_t in_scancode() {
 
 
 //in_char(bool) - return char from kbd buffer
-char in_char(bool wait) { 
+char in_char(bool wait) {
 	static bool shift = false;
 	uint8_t chr;
 	do {
@@ -67,7 +65,7 @@ char in_char(bool wait) {
 			chr = 0; //key pressed out
 		}
 		if (shift) {
-			chr = kbmap_shifted[chr]; 
+			chr = kbmap_shifted[chr];
 		} else {
 			chr = kbmap[chr];
 		}

@@ -29,6 +29,7 @@ uint32_t kmalloc_a(uint32_t sz);
 uint32_t kmalloc_p(uint32_t sz, uint32_t *phys);
 uint32_t kmalloc_ap(uint32_t sz, uint32_t *phys);
 uint32_t kmalloc(uint32_t sz);
+void kfree(uint32_t addr);
 
 heap_t *create_heap(uint32_t placement_addr, uint32_t start, uint32_t end,
                     uint32_t max, uint8_t supervisor, uint8_t readonly);

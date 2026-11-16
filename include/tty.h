@@ -1,5 +1,5 @@
 #ifndef TTY_H
-#define TTY_Y
+#define TTY_H
 
 #include <libk/stdint.h>
 
